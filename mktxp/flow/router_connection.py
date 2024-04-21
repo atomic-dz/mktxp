@@ -81,7 +81,7 @@ class RouterAPIConnection:
             try:
                 self.api = self.connection.get_api()
             except:                
-                self.connection.plaintext_login = False
+                self.connection.plaintext_login = True
                 self.api = self.connection.get_api()
 
             self._set_connect_state(success = True, connect_time = connect_time)
